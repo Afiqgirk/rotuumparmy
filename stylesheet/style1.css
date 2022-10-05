@@ -1,0 +1,793 @@
+
+    html {
+        box-sizing: border-box;
+    }
+          
+    *, *:before, *:after {
+        box-sizing: inherit;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.93); /* Black background with 0.5 opacity */
+      color: white;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 20px;
+    }
+
+    body{
+        background-color: white;
+    }
+
+    nav{
+        background-color: rgb(1, 65, 17);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+      h6{
+        background-color: none;
+        width: 90%;
+        border: none;
+        padding: 10px;
+        margin: none;
+        margin-left: 5%;
+        text-align: justify;
+        color: white;
+        float: left;
+        height: 90%;
+        position: relative;
+      }
+
+      h1{
+        background-color: none;
+        width: 80%;
+        border: none;
+        padding: 5px;
+        margin-top: 10px;
+        margin-left: 10%;
+        text-align: center;
+        color: white;
+        font-size: 46px;
+        float: left;
+      }
+
+
+
+      .c{
+        background-color: rgb(1, 65, 17);
+        height: 361px;
+        width: 55%;
+        border: 1px solid black;
+        padding: none;
+        color: white;
+        float: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .w::after{
+        color: black;
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .c{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .d{
+        background-color: white;
+        width: 361px;
+        height: 52%;
+        color: white;
+        float: left;
+
+      }
+
+      @media screen and (max-width: 1000px) {
+        .d{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .button {
+        border: none;
+        color: white;
+        padding: 14px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: rgba(0, 110, 255, 0.979); 
+      }
+
+      .button:hover {
+        background-color: rgba(134, 186, 255, 0.892);
+      }
+
+      .edits {
+        border: none;
+        color: white;
+        padding: 14px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: #04AA6D;
+      }
+
+      .edits:hover {
+        background-color: #04945f;
+        color: white;
+      }
+
+      .deletes {
+        border: none;
+        color: white;
+        padding: 14px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: rgb(255, 62, 62); 
+      }
+
+      .deletes:hover {
+        background-color: rgb(254, 14, 14);
+        color: white;
+      }
+
+      .edit {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        background-color: #04AA6D;
+        text-align:center; 
+        color: white; 
+        padding: 12px 20px; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        width: 100%;
+      }
+
+      .edit:hover {
+        background-color: #0c9865;
+        color: white;
+      }
+
+      .delete {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        background-color: rgb(255, 62, 62);
+        text-align:center; 
+        color: white; 
+        padding: 12px 20px; 
+        border: none; border-radius: 4px; 
+        cursor: pointer; 
+        width: 100%;
+      }
+
+      .delete:hover {
+        background-color: rgb(251, 13, 13);
+        color: white;
+      }
+
+      .imgump{
+        height:50px; 
+        width:50px;
+        float: left; 
+        margin-left: 9px; 
+        margin-top: 4px;
+      }
+
+      .imgaw{
+        height:55px; 
+        width:55px;
+        float: left; 
+        margin-left: 15px;
+      }
+
+      .divnav{
+        width: 100%;
+      }
+
+      .navbarbrand{
+        margin-left: 10px; 
+        margin-top: 10px; 
+        float: left;
+        color: white; 
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .navbarbrand:hover{
+          color: rgba(0, 110, 255, 0.705);;
+      }
+
+      .navbartoggler{ 
+        float:right; 
+        margin-top: 7px; 
+        margin-right: 20px;
+        background-color: inherit;
+        border-radius: 5px;
+        width: 50px;
+        height: 40px;
+        border-style:solid;
+        border-color: white;
+      }
+      
+      .columnside {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .columnside {
+          width: 100%;
+          display: block;
+        }
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      .containerside {
+        padding: 0 16px;
+        background-color: rgb(1, 65, 17);
+        color: white;
+      }
+      
+      .containerside::after, .rowside::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .date {
+        color: rgb(201, 200, 200);
+      }
+      
+      .buttonside {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: rgba(0, 110, 255, 0.979);
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .buttonside:hover {
+        background-color: rgba(0, 110, 255, 0.705);
+      }
+
+      /*ABOUT.CSS ONLY*/
+      .columnside2 {
+        float: left;
+        width:  50%;
+      }
+      
+      @media screen and (max-width: 750px) {
+        .columnside2 {
+          width: 100%;
+          display: block;
+          height: 100%;
+        }
+
+        .imgabout{
+          height: 100%;
+      }
+      }
+
+      .containerside2 {
+        padding: 0 16px;
+        background-color: rgb(1, 65, 17);
+        color: white;
+        margin-bottom: none;
+      }
+
+      .containerside2::after, .rowside2::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .imgabout{
+          height: 100%;
+      }
+
+      .rowside2{
+          margin-top: 22px;
+         
+      }
+
+      .rowside3{
+        margin-top: 5px;
+    }
+
+    .containersideimg {
+        background-color: white;
+        color: rgb(161, 157, 157);
+        height: 500px;
+      }
+
+      .containersideimg::after, .rowside3::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /*CHART.CSS ONLY////////////////////////////////////////////////////*/
+      #myImg,#myImg2,#myImg3,#myImg4,#myImg5 {
+        cursor: pointer;
+        transition: 0.3s;
+        height: 100%;
+      }
+      
+      /*#myImg:hover,#myImg2:hover,#myImg3:hover,#myImg4:hover,#myImg5:hover {opacity: 0.7;}
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+      
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 1200px;
+      }
+      
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+      
+      /* Add Animation */
+      .modal-content, #caption {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+      
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+      
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+
+/*news.CSS ONLY//////////////////////////////////////////////*/
+/* Position the image container (needed to position the left and right arrows) */
+.containernews {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides, .mySlides1, .mySlides2 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 20px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  text-decoration: none;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.rownews:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.columnnews {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demonews, .demonews1, .demonews2{
+  opacity: 0.6;
+}
+
+.active,
+.demonews:hover,.demonews1:hover,.demonews2:hover {
+  opacity: 1;
+}
+/*FAQ.CSS ONLY//////////////////////////////////////////////////////////////////*/
+.accordionfaq {
+  background-color: rgba(0, 110, 255, 0.979);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  height: 70px;
+  margin-bottom: -20px;
+  margin-top: -20px;
+}
+
+.activefaq, .accordionfaq:hover {
+  background-color: grey;
+}
+
+.accordionfaq:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  
+}
+
+.activefaq:after {
+  content: "\2212"; 
+}
+
+.panelfaq {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.rowsidefaq::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.rowsidefaq{
+    margin-top: 22px;
+    margin-bottom: none;
+}
+/*CONTACT.CSS ONLY//////////////////////////////////////////////////*/
+input[type=text], input[type=date], input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit]{
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover{
+  background-color: #45a049;
+}
+
+input[type=cancel]{
+  background-color: rgb(255, 44, 44);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+input[type=cancel]:hover{
+  background-color: rgb(250, 13, 13);
+}
+
+.columnsidecontact {
+  float: left;
+  width:  50%;
+  height: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .columnsidecontact {
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+}
+
+
+.containersidecont {
+  padding: 0 16px;
+  background-color: rgb(1, 65, 17);
+  color: white;
+  height: 129px;
+}
+
+.containersidecont::after, .rowside2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.pictitle{
+  background-image: url(../asset/title.jpg);  
+  width: 100%;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  text-align: center;
+  margin-bottom: -4%;
+}
+
+.texttitle{
+  font-weight: bolder;
+  z-index: 2;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  width: 100%;
+  margin-top: -7%;
+  color:white;
+}
+
+
+@media screen and (max-width: 750px) {
+  .texttitle {
+    width: 100%;
+    margin-top: -15%;
+  }
+}
+
+/*REGISTER ONLY////////////////////////////////////////*/
+/* Full-width input fields */
+.inputreg[type=text], .inputreg[type=password], .inputreg {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+
+/* Add a background color when the inputs get focus */
+.inputreg[type=text]:focus, .inputreg[type=password]:focus, .inputreg:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+.signupbtn, .cancelbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.signupbtn:hover, .cancelbtn:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.containerreg {
+  padding: 16px;
+  color: black;
+}
+
+/* The Modal (background) */
+.modalreg {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #36393ec8; 
+  padding-top: none;
+}
+
+/* Modal Content/Box */
+.modal-contentreg {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.closereg {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.closereg:hover,
+.closereg:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+.h1reg{
+  color: black;
+  float: left;
+  text-align: left;
+  margin-left: -10px;
+  width: 100%;
+}
+
